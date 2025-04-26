@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First webpage</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial,sans-serif;
+            scroll-behavior: smooth;    
+        }
+        header{
+            background-color:aqua;
+            color:black;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        nav{
+            background-color:blue;
+            justify-content: center;
+            display: flex;
+        }
+        nav a{
+            color:white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover{
+            background-color: yellow;
+            color: black;
+            border: 2px solid ;
+        }
+        section{
+            padding: 40px 20px; 
+        }
+        footer{
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        form input,form textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form input[type="submit"]{
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor:pointer;
+        }
+        form input[type="submit"]:hover{
+            background-color: rgb(219, 127, 14);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Organisation</h1>
+        <p>Making the difference together</p>
+    </header>
+    <nav>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Contact">Contact</a>
+    </nav>
+    <section id="Home">
+        <h2>Home</h2>
+        <p>We are committed to providing impactful Services to our community through innovation and teamwork. </p>
+    </section id="About">
+    <section>
+        <h2>About us</h2>
+        <p>Our Organisation was founded with the mission of creating sustainable solutions for social good.We believe in transparency,community involvement,and long-term impact.</p>
+    </section>
+    <section id="Services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Community outreach</li>
+            <li>Educational Workshops</li>
+            <li>Healthcare Awareness Programs</li>
+        </ul>
+    </section>
+    <section id="Contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <input type="submit" value="Send message">
+        </form>
+    </section>
+    <footer>
+        <p>&copy;2025 Our Organisation.All rights reserved</p>
+    </footer>
+    <script>
+        function handleSubmit(event){
+            event.preventDefault();
+            alert("Message has been sent");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
